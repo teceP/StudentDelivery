@@ -1,15 +1,13 @@
 [data-theme="dark"] {
+
     background-color: #333333 !important;
     color: #eee;
 }
 
-[data-theme="dark"] .bg-light {
-    background-color: #333 !important;
-}
-
-.nav-item{
+.fa-moon {
     color: white;
 }
+
 input[type=checkbox].toggle-switch {
 
     appearance: none;
@@ -47,7 +45,7 @@ input[type=checkbox].toggle-switch::after {
 }
 
 input[type=checkbox].toggle-switch:checked {
-    background-color: #333;
+    background-color: gray;
 }
 
 input[type=checkbox].toggle-switch:checked:active::after {
@@ -56,5 +54,5 @@ input[type=checkbox].toggle-switch:checked:active::after {
 
 input[type=checkbox].toggle-switch:checked::after {
     left: 1.35em;
-    background-color: #242424;
+    background-color: gray;
 }
