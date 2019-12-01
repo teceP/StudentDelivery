@@ -4,55 +4,76 @@
     color: #eee;
 }
 
-.fa-moon {
+[data-theme="dark"] .navbar-expand-md {
+
+    background-color: #3b4652 !important;
+    color: #eee;
+}
+[data-theme="dark"] .navbar-expand-md .nav-link {
+    color: lightgray;
+}
+/*[data-theme="dark"] .navbar-expand-md .nav-item:hover .nav-link  {
+    color: aqua;
+}*/
+
+.fa-moon{
+    margin-right: auto;;
+    margin-left: auto;
+}
+
+
+.nav-text {
+    font-size: 1.2em;
     color: white;
+    font-weight: lighter;
 }
 
-input[type=checkbox].toggle-switch {
-
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    outline: 0;
-    cursor: pointer;
-    /* width of the track */
-    width: 2em;
-    /* height of the track */
-    height: .5em;
-    border-radius: 3em;
-    background-color: #ebebeb;
-    transition: background-color 0.09s ease-in-out;
-    position: relative;
-}
-
-input[type=checkbox].toggle-switch:active::after {
-    background-color: #f2f2f2;
-    padding-right: .8em;
-}
-
-input[type=checkbox].toggle-switch::after {
-    content: '';
-    width: .8em;
-    height: .8em;
-    background-color: white;
-    border-radius: 1.5em;
+input[type="checkbox"]{
     position: absolute;
-    left: -5px;
-    top: 50%;
-    transform: translateY(-50%);
-    transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
-    box-shadow: 2px 0px 5px 0 rgba(0, 0, 0, 0.15);
+    transform:scale(4.2,2);
+    opacity: 0;
+    cursor:pointer;
+    margin-right: auto;;
+    margin-left: 1.4em;
+    top: 1.3em;
 }
 
-input[type=checkbox].toggle-switch:checked {
-    background-color: gray;
+
+.icon-box{
+    width: 50px;
+    height: 30px;
+    background: #101010;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    border: 3px solid grey;
+    border-radius: 4px;
+    transition: 0.5s;
+
+
+
+
 }
 
-input[type=checkbox].toggle-switch:checked:active::after {
-    margin-left: -.8em;
+.icon-box .fa-moon{
+    font-size: 17px;
+    color: gray;
+    transition:0.5s;
+}
+input[type="checkbox"]:checked  ~ .icon-box{
+    background: #000;
+    border: 3px solid #fff;
+    box-shadow:  0 0 10px rgba(33,156,243, .5),
+    0 0 20px rgba(33,156,243, .5),
+    0 0 30px rgba(33,156,243, .5),
+    inset 0 0 10px rgba(33,156,243,1);
+}
+input[type="checkbox"]:checked  ~ .icon-box .fa-moon{
+    color : #fff;
+    text-shadow: 0 0 10px rgba(33,156,243,1),
+    0 0 10px rgba(33,156,243,1);
+
+
 }
 
-input[type=checkbox].toggle-switch:checked::after {
-    left: 1.35em;
-    background-color: gray;
-}
