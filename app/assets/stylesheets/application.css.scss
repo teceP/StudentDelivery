@@ -13,6 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
@@ -24,33 +25,27 @@ body {
   background-size: cover;
 }*/
 
-
-.navbar-expand-md .nav-link {
-  letter-spacing: 0.2px;
-  font-size: 1.5em;
-  font-weight: lighter;
-  color: black;
+.nav-item{
+    letter-spacing: 0.2px;
+    font-size:1.5em;
+    font-weight: lighter;
 }
 
-.nav-text {
-
-  font-size: 1.2em;
-  color: white;
-  font-weight: lighter;
-  margin-right: auto;
-  margin-left: auto;
+.nav-text{
+    font-size: 1.2em;
+    color: white;
+    font-weight: lighter;
 }
 
-.navbar-expand-md .nav-item:hover .nav-link {
-  color: aqua;
+.navbar-nav .nav-item:hover .nav-link {
+    color: aqua;
 }
 
 .navbar-nav > li > a {
-  padding-top: .5px !important;
-  padding-bottom: .5px !important;
+  padding-top:1px !important;
+  padding-bottom:1px !important;
 }
 
 .navbar {
-  min-height: 1px !important;
+  min-height:2px !important;
 }
-
