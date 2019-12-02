@@ -14,4 +14,17 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  module MiniTestWithBullet
+    require 'minitest/unit'
+    def before_setup
+      Bullet.start_request
+      super if defined?(super)
+    end
+    def after_teardown
+      super if defined?(super)
+      Bullet.perform_out_of_channel_notifications if Bullet.notification?
+      Bullet.end_request
+    end
+  end
 end
