@@ -7,7 +7,8 @@ require("@rails/ujs").start();
 require("turbolinks").start();
 require("@rails/activestorage").start();
 require("channels");
-
+require("./dark-mode-switch");
+require("./dark-mode-switch.min");
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
