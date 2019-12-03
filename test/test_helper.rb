@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-ENV['RAILS_ENV'] ||= 'test'
-require_relative '../config/environment'
-require 'rails/test_help'
-require 'simplecov'
+ENV["RAILS_ENV"] ||= "test"
+require_relative "../config/environment"
+require "rails/test_help"
+require "simplecov"
 SimpleCov.start
 
 class ActiveSupport::TestCase
@@ -16,7 +16,7 @@ class ActiveSupport::TestCase
   # Add more helper methods to be used by all tests here...
 
   module MiniTestWithBullet
-    require 'minitest/unit'
+    require "minitest/unit"
     def before_setup
       Bullet.start_request
       super if defined?(super)

@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require 'test_helper'
+require "test_helper"
 
 class ProfileControllerTest < ActionDispatch::IntegrationTest
-  test 'should get profile' do
+  test "should get profile" do
     get profile_profile_url
     assert_response :success
   end
