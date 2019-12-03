@@ -31,8 +31,6 @@
         <%= javascript_pack_tag 'dark-mode-switch', 'data-turbolinks-track': 'reload' %>
       </li>
       <% if user_signed_in? %>
-        <!-- Vor- und Nachname bei Anmeldung noch abfragen, dann "Hi, Vorname" -->
-        <font color="white">Hi, <strong><%= current_user.email %></strong>.</font>
 
         <% if current_page?('/profile/profile') %>
 
