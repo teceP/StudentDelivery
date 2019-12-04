@@ -1,0 +1,13 @@
+---
+- - :ignore_group
+  - production
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2019-12-03 18:36:17.095173400 Z
+- - :whitelist
+  - MIT
+  - :who: S.Schuette
+    :why: free to use
+    :versions: []
+    :when: 2019-12-03 18:37:50.983038900 Z
