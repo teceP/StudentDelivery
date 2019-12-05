@@ -11,3 +11,157 @@
     :why: free to use
     :versions: []
     :when: 2019-12-03 18:37:50.983038900 Z
+- - :ignore_group
+  - production
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2019-12-05 09:08:43.211572100 Z
+- - :whitelist
+  - MIT
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2019-12-05 09:15:53.360241200 Z
+- - :whitelist
+  - Apache
+  - &1
+    :who: 
+    :why: 
+    :versions: []
+    :when: 2019-12-05 09:19:28.893009800 Z
+- - :whitelist
+  - '2.0'
+  - *1
+- - :whitelist
+  - Apache2
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2019-12-05 09:21:11.060910300 Z
+- - :whitelist
+  - Apache
+  - &2
+    :who: mario
+    :why: free to use
+    :versions: []
+    :when: 2019-12-05 09:22:30.633165000 Z
+- - :whitelist
+  - '2.0'
+  - *2
+- - :whitelist
+  - Apache2
+  - :who: mario
+    :why: free to use
+    :versions: []
+    :when: 2019-12-05 09:22:41.802598900 Z
+- - :whitelist
+  - MIT
+  - :who: mario
+    :why: free to use
+    :versions: []
+    :when: 2019-12-05 09:22:51.651120100 Z
+- - :approve
+  - brakeman
+  - :who: T. Mario
+    :why: non-commercial use
+    :versions: []
+    :when: 2019-12-05 09:28:38.023102500 Z
+- - :approve
+  - bundler-audit
+  - :who: T. Mario
+    :why: free to use (gpl license)
+    :versions: []
+    :when: 2019-12-05 09:32:16.341006500 Z
+- - :whitelist
+  - ruby
+  - :who: 
+    :why: 
+    :versions: []
+    :when: 2019-12-05 09:43:21.632691800 Z
+- - :approve
+  - sqlite3
+  - :who: T. Mario
+    :why: open source - https://sqlite.org/copyright.html
+    :versions: []
+    :when: 2019-12-05 09:47:54.308252000 Z
+- - :approve
+  - sqlite3
+  - :who: T. Mario
+    :why: https://github.com/rubyzip/rubyzip says, rubyzip is licensed by https://www.ruby-lang.org/en/about/license.txt
+    :versions: []
+    :when: 2019-12-05 09:51:55.377178900 Z
+- - :approve
+  - rubyzip
+  - :who: T. Mario
+    :why: https://github.com/rubyzip/rubyzip says, rubyzip is licensed by https://www.ruby-lang.org/en/about/license.txt
+      THIS SOFTWARE IS PROVIDED "jdleesmiller" AND WITHOUT ANY EXPRESS OR IMPLIED
+      WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+      AND FITNESS FOR A PARTICULAR PURPOSE.
+    :versions: []
+    :when: 2019-12-05 09:53:30.038460500 Z
+- - :approve
+  - puma
+  - :who: T. Mario
+    :why: BSD 3-Clause License
+    :versions: []
+    :when: 2019-12-05 09:55:21.237121100 Z
+- - :approve
+  - puma
+  - :who: T. Mario
+    :why: 'BSD 3-Clause License Copyright (c) 2019, Evan Phoenix. Some code by Zed
+      Shaw, (c) 2005. All rights reserved. Redistribution and use in source and binary
+      forms, with or without modification, are permitted provided that the following
+      conditions are met: 1. Redistributions of source code must retain the above
+      copyright notice, this list of conditions and the following disclaimer. 2. Redistributions
+      in binary form must reproduce the above copyright notice, this list of conditions
+      and the following disclaimer in the documentation and/or other materials provided
+      with the distribution. 3. Neither the name of the copyright holder nor the names
+      of its contributors may be used to endorse or promote products derived from
+      this software without specific prior written permission.THIS SOFTWARE IS PROVIDED
+      BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED
+      WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY
+      AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+      HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+      EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+      OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+      INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT,
+      STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+      WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH
+      DAMAGE."Copyright (c) 2010-2015 Illumina, Inc.All rights reserved. Redistribution
+      and use in source and binary forms, with or without modification, are permitted
+      provided that the following conditions are met: 1. Redistributions of source
+      code must retain the above copyright notice, this list of conditions and the
+      following disclaimer. 2. Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following disclaimerin the
+      documentation and/or other materials provided with the distribution. THIS SOFTWARE
+      IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS
+      OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIEDi WARRANTIES
+      OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+      EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+      INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES(INCLUDING, BUT NOLIMITED
+      TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+      OR BUSINESS INTERRUPTION) HOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER
+      IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+      IN ANY WAY OUT OF THE USE OFHIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+      OF SUCH DAMAGE.'
+    :versions: []
+    :when: 2019-12-05 09:58:37.897826700 Z
+- - :approve
+  - launchy
+  - :who: T. Mario
+    :why: Copyright (c) 2019, jjh @ rubygems.org
+    :versions: []
+    :when: 2019-12-05 10:01:21.660175700 Z
+- - :approve
+  - ffi
+  - :who: T. Mario
+    :why: Copyright (c) 2019, [tduehr, headius, enebo, larskanis] @ rubygems.org
+    :versions: []
+    :when: 2019-12-05 10:04:10.801608700 Z
+- - :approve
+  - byebug
+  - :who: T. Mario
+    :why: Copyright (c) 2019, deivid @ rubygems.org
+    :versions: []
+    :when: 2019-12-05 10:04:54.803651700 Z
