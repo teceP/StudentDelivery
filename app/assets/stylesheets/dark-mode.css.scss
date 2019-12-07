@@ -1,0 +1,81 @@
+[data-theme="dark"] {
+
+  background-color: #333333 ;
+  color: #eee;
+}
+
+[data-theme="dark"] .navbar-expand-md {
+
+  background-color: #3b4652 ;
+  color: #eee;
+}
+
+[data-theme="dark"] .navbar-expand-md .nav-link {
+  color: lightgray;
+}
+
+
+.fa-moon {
+  margin-right: auto;;
+  margin-left: auto;
+}
+
+
+.nav-text {
+  font-size: 1.2em;
+  color: white;
+  font-weight: lighter;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  transform: scale(4, 2);
+  cursor: pointer;
+  margin-right: auto;;
+  margin-top: .4em;
+  margin-left: .8em;
+}
+
+
+.icon-box {
+
+  width: 50px;
+  height: 30px;
+  background: #101010;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  border: 3px solid grey;
+  border-radius: 4px;
+  transition: 0.5s;
+  margin-right: auto;;
+  margin-left: auto;
+
+
+}
+
+.icon-box .fa-moon {
+  font-size: 17px;
+  color: gray;
+  transition: 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .icon-box {
+  background: #000;
+  border: 3px solid #fff;
+  box-shadow: 0 0 10px rgba(33, 156, 243, .5),
+  0 0 20px rgba(33, 156, 243, .5),
+  0 0 30px rgba(33, 156, 243, .5),
+  inset 0 0 10px rgba(33, 156, 243, 1);
+}
+
+input[type="checkbox"]:checked ~ .icon-box .fa-moon {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(33, 156, 243, 1),
+  0 0 10px rgba(33, 156, 243, 1);
+
+
+}
+
