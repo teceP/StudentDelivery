@@ -1,0 +1,43 @@
+<div class="modal-dialog text-center">
+  <div class="col-sm-8 main-section">
+    <div class="modal-content">
+
+
+      <div class="col-12">
+
+
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+          <!-- Enter E-Mail Textfield -->
+          <div class="form-group" id="email-field">
+            <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-Mail" %>
+          </div>
+
+          <!-- Enter Password Textfield -->
+          <div class="form-group" id="password-field">
+            <%= f.password_field :password, autocomplete: "new-password", placeholder: "Password" %>
+          </div>
+
+          <!-- Password Confirmation -->
+          <div class="form-group" id="password-conf-field">
+            <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Password confirmation" %>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="btn">
+            <%= f.submit "Sign up", class: 'btn btn-rounded'%>
+          </div>
+
+          </div>
+
+          <!-- Already signed up? -->
+          <div class="col-12 forgot">
+            <%= link_to 'Log in', new_user_session_path%>
+          </div>
+
+        <% end %>
+
+        </div> <!-- End of Modal Content -->
+  </div>
+</div>

@@ -7,6 +7,10 @@ ruby "2.6.5"
 
 # For user/admin
 gem "devise"
+gem "devise_roles"
+#for default profile avatar
+gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
+gem 'image_processing', '~> 1.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 6.0.1.rc1"
 
@@ -46,6 +50,7 @@ group :development, :test do
   gem "awesome_print"
   # Use for fighting the N+1 problem in Ruby
   gem "bullet"
+  gem "rails_layout"
 end
 
 group :development do

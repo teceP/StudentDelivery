@@ -1,0 +1,37 @@
+<div class="modal-dialog text-center">
+  <div class="col-sm-8 main-section">
+    <div class="modal-content">
+
+      <div class="col-12">
+
+        <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+        <!-- Enter E-Mail Textfield -->
+        <div class="form-group">
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "E-Mail" %>
+        </div>
+
+          <!-- Enter Password Textfield -->
+          <div class="form-group">
+            <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="btn">
+            <%= f.submit "Log in", class: 'btn btn-rounded' %>
+          </div>
+
+      </div>
+
+    <!-- Forgot Password? -->
+      <div class="col-12 forgot">
+        <%= link_to "Forgot Password", new_user_password_path(current_user) %> |
+        <%= link_to "Join us", new_user_registration_path(current_user) %>
+
+      </div>
+
+      <% end %>
+
+    </div> <!-- End of Modal Content -->
+  </div>
+</div>
