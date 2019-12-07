@@ -8,12 +8,11 @@ ruby "2.6.5"
 # For user/admin
 gem "devise"
 gem "devise_roles"
-#for default profile avatar
-gem 'gravatar_image_tag', github: 'mdeering/gravatar_image_tag'
-gem 'image_processing', '~> 1.2'
+# for default profile avatar
+gem "gravatar_image_tag", github: "mdeering/gravatar_image_tag"
+gem "image_processing", "~> 1.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 6.0.1.rc1"
-
 # Use Puma as the app server
 gem "puma", "~> 4.1"
 # Use SCSS for stylesheets
