@@ -7,11 +7,11 @@
 
       <div class="col-12">
 
-        <%= form_with model: @user, url: registration_path(current_user), html: { autocomplete: "off" }, local: true do |form| %>
+        <%= form_with model: @user, url: registration_path(@current_user), html: { autocomplete: "off" }, local: true do |form| %>
           <%= render "devise/shared/error_messages", resource: resource %>
 
           <div class="profile-img" id="profilepic">
-            <%= image_tag user_avatar(current_user, 100), class: "rounded" %>
+            <%= image_tag user_avatar(@current_user, 100), class: "rounded" %>
             <%= form.file_field :avatar %>
           </div>
 
