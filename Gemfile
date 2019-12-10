@@ -8,6 +8,7 @@ ruby "2.6.5"
 # For user/admin
 gem "devise"
 gem "devise-encryptable"
+gem "sendgrid-ruby"
 gem "devise_roles"
 # for default profile avatar
 gem "gravatar_image_tag", github: "mdeering/gravatar_image_tag"
