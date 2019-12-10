@@ -47,7 +47,7 @@
             <%= form.password_field :current_password, placeholder: "Current password" %>
           </div>
 
-          <div class="btn">
+          <div class="btn" id="update-profile-btn">
             <% provide(:title, @current_user.email) %>
             <%= form.submit "Update", class: 'btn btn-rounded' %>
           </div></div>
