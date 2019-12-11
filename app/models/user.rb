@@ -13,11 +13,16 @@ class User < ApplicationRecord
 
   has_one_attached :avatar
 
+  # not safe enough for passwords, only for email text etc.
   def User.digist(string)
     cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
 
     # cost = strength of password encryption (optional)
     BCrypt::Password.create(string, cost: cost)
+  end
+
+  def admin?
+    admin
   end
 
 end
