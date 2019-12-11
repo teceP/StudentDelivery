@@ -8,8 +8,8 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable#, :database_authenticatable, :encryptable #Error:uninitialized constant Devise::Models::Encryptable
-                                                                                             # Did you mean?  Devise::Encryptor
+         :recoverable, :rememberable, :validatable # , :database_authenticatable, :encryptable #Error:uninitialized constant Devise::Models::Encryptable
+  # Did you mean?  Devise::Encryptor
 
   has_one_attached :avatar
 
@@ -24,5 +24,4 @@ class User < ApplicationRecord
   def admin?
     admin
   end
-
 end

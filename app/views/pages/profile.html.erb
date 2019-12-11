@@ -10,6 +10,9 @@
         <li class="list-group-item"><%= current_user.email if current_user.email? %></li>
         <li class="list-group-item"><%= current_user.subject if current_user.subject? %></li>
         <li class="list-group-item"><%= current_user.karma if current_user.karma? %> Karma Points</li>
+      <% if current_user && current_user.admin? %>
+         ==> You are currently in admin mode!
+      <% end %>
     </ul>
     <div class="card-body" id="edit_profile_card">
         <%= link_to 'Edit profile', edit_user_registration_path, :class => 'profile-edit-btn', :name => "btnAddMore", :type => "" %>
