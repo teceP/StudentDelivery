@@ -13,7 +13,7 @@
 <body>
 <%= render '/layouts/header' %>
 
-<% flash.each do |name, msg| %>
+<% flash.each do |type, msg| %>
   <%= content_tag :div, msg, class: "alert alert-info" %>
 <% end %>
 

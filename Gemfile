@@ -92,6 +92,7 @@ group :development do
   gem "iye", require: false
   # Preview email in the default browser instead of sending it.
   gem "letter_opener"
+  gem 'dotenv-rails'
 end
 
 group :test do
