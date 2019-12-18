@@ -1,0 +1,62 @@
+<div class="modal-dialog text-center">
+  <div class="col-sm-8 main-section">
+    <div class="modal-content">
+      <div class="col-12 user-img">
+
+      </div>
+
+      <div class="col-12">
+
+        <%= form_with model: @user, url: registration_path(@current_user), html: { autocomplete: "off" }, local: true do |form| %>
+          <%= render "devise/shared/error_messages", resource: resource %>
+
+          <div class="profile-img" id="profilepic">
+            <%= image_tag user_avatar(@current_user, 100), class: "rounded" %>
+            <%= form.file_field :avatar %>
+          </div>
+
+          <div class="form-group">
+            <%= form.text_field :username, autofocus: true, placeholder: "Username" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.email_field :email, autofocus: true, placeholder: "E-Mail" %>
+          </div>
+
+          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+            <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+          <% end %>
+
+          <div class="form-group">
+            <%= form.text_field :subject, autofocus: true, placeholder:"Uni Subject"%>
+          </div>
+
+          <div class="form-group">
+            <%= form.text_field :bio, autofocus: true, placeholder:"Bio"%>
+          </div>
+
+          <div class="form-group">
+            <%= form.password_field :password, placeholder: "New password" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.password_field :password_confirmation, placeholder: "Password confirmation" %>
+          </div>
+
+          <div class="form-group">
+            <%= form.password_field :current_password, placeholder: "Current password" %>
+          </div>
+
+          <div class="btn" id="update-profile-btn">
+            <% provide(:title, @current_user.email) %>
+            <%= form.submit "Update", class: 'btn btn-rounded' %>
+          </div></div>
+
+
+        <% end %>
+
+
+      </div>
+  </div>
+</div>
+</div>

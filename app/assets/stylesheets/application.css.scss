@@ -13,10 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
-@import "dark-mode";
 
 /*
 body {
@@ -25,27 +25,32 @@ body {
   background-size: cover;
 }*/
 
-.nav-item {
-  letter-spacing: 0.2px;
-  font-size: 1.5em;
-  font-weight: lighter;
+.nav-item{
+    letter-spacing: 0.2px;
+    font-size:1.5em;
+    font-weight: lighter;
 }
 
-.nav-text {
-  font-size: 1.2em;
-  color: white;
-  font-weight: lighter;
+.nav-text{
+    font-size: 1.2em;
+    color: white;
+    font-weight: lighter;
 }
 
 .navbar-nav .nav-item:hover .nav-link {
-  color: aqua;
+    color: aqua;
 }
 
 .navbar-nav > li > a {
-  padding-top: 1px !important;
-  padding-bottom: 1px !important;
+  padding-top:1px !important;
+  padding-bottom:1px !important;
 }
 
 .navbar {
-  min-height: 2px !important;
+  min-height:2px !important;
+}
+
+.gravatar {
+  height: 30px;
+  width: auto;
 }

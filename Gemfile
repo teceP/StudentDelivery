@@ -7,9 +7,18 @@ ruby "2.6.5"
 
 # For user/admin
 gem "devise"
+# Using SHA Encryption instead of normal bcrypt
+gem "devise-encryptable"
+# Using sendgrid as mailer addon
+gem "sendgrid-ruby"
+# Devise Testing with factory bot
+gem "factory_bot"
+# for default profile avatar
+gem "gravatar_image_tag", github: "mdeering/gravatar_image_tag"
+# for cropping image
+gem "image_processing", "~> 1.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem "rails", "~> 6.0.1.rc1"
-
 # Use Puma as the app server
 gem "puma", "~> 4.1"
 # Use SCSS for stylesheets
@@ -23,7 +32,7 @@ gem "jbuilder", "~> 2.7"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem "bcrypt", "~> 3.1.7"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -46,6 +55,7 @@ group :development, :test do
   gem "awesome_print"
   # Use for fighting the N+1 problem in Ruby
   gem "bullet"
+  gem "rails_layout"
 end
 
 group :development do
@@ -82,6 +92,7 @@ group :development do
   gem "iye", require: false
   # Preview email in the default browser instead of sending it.
   gem "letter_opener"
+  gem 'dotenv-rails'
 end
 
 group :test do
@@ -97,7 +108,8 @@ group :test do
   gem "capybara", ">= 2.15", "< 4.0"
   gem "selenium-webdriver"
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem "chromedriver-helper"
+  # gem "chromedriver-helper" # <== DEPRACTED USE INSTEAD: webdrivers
+  gem 'webdrivers', '~> 4.0'
   # Speedup RSpec + Cucumber by running parallel on multiple CPU cores
   gem "parallel_tests"
 end

@@ -42,7 +42,8 @@ Rails.application.configure do
   config.active_support.deprecation = :log
 
   # Raise an error on page load if there are pending migrations.
-  config.active_record.migration_error = :page_load
+  config.active_record.migration_error = :page_load # so orignal!
+  #config.active_record.migration_error = false
 
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
@@ -63,6 +64,19 @@ Rails.application.configure do
   # config.file_watcher = ActiveSupport::EventedFileUpdateChecker
   #
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => 'mail.google.com',
+    :user_name            => 'lisabrown472@gmail.com',
+    :password             => 'XXXX',
+    :authentication       => 'plain',
+    :enable_starttls_auto => true
+  }
+
+  config.action_mailer.perform_deliveries = true
+
 
   config.after_initialize do
     Bullet.enable = true

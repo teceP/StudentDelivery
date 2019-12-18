@@ -75,7 +75,16 @@ input[type="checkbox"]:checked ~ .icon-box .fa-moon {
   color: #fff;
   text-shadow: 0 0 10px rgba(33, 156, 243, 1),
   0 0 10px rgba(33, 156, 243, 1);
-
-
 }
 
+[data-theme="dark"] .form-group.text {
+  color: #6f6f6f !important;
+}
+
+[data-theme="dark"] .card.text {
+  color: #000000 !important;
+}
+
+/*[data-theme="dark"] .form-group.text {
+  color: #EFEFEF !important;
+}*/
