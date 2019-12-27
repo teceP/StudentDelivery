@@ -10,15 +10,28 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    #Don't need show
+    redirect_to root_path
   end
 
   # GET /products/new
   def new
-    @product = Product.new
+    if user_signed_in?
+      if current_user.admin?
+        @product = Product.new
+      end
+    end
+    redirect_to root_path, notice: 'No permission to create product'
   end
+
 
   # GET /products/1/edit
   def edit
+    if user_signed_in?
+      if current_user.admin?
+      end
+    end
+     redirect_to root_path, notice: 'No permission to edit product'
   end
 
   # POST /products
@@ -62,13 +75,14 @@ class ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      @product = Product.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(:title, :price)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    @product = Product.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    params.require(:product).permit(:title, :price)
+  end
 end

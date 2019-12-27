@@ -5,7 +5,7 @@
       <h4><%= product.title %></h4>
     </div>
     <div class="col-3">
-      <h4><%= product.price %></h4>
+      <h4><%= number_to_currency(product.price, :unit => '€') %></h4>
     </div>
     <div class="col-3">
       <%= button_to 'Add to Cart', line_items_path(product_id: product), class: "button is-small" %>
