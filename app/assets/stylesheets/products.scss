@@ -1,0 +1,17 @@
+div.row {
+  border: 1px solid;
+  border-bottom: 0px;
+}
+.container div.row:last-child {
+  border-bottom: 1px solid!important;
+}
+
+.col-3 {
+  padding-top: 2em;
+}
+
+.col-2 {
+  position: absolute;
+  margin-right: 4%;
+  padding-top: 1.5em;
+}
