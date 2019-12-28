@@ -1,4 +1,6 @@
-require 'test_helper'
+# frozen_string_literal: true
+
+require "test_helper"
 
 class LineItemsControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -16,7 +18,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create line_item" do
-    assert_difference('LineItem.count') do
+    assert_difference("LineItem.count") do
       post line_items_url, params: { line_item: { cart_id: @line_item.cart_id, product_id: @line_item.product_id } }
     end
 
@@ -39,7 +41,7 @@ class LineItemsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy line_item" do
-    assert_difference('LineItem.count', -1) do
+    assert_difference("LineItem.count", -1) do
       delete line_item_url(@line_item)
     end
 

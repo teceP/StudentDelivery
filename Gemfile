@@ -41,7 +41,7 @@ gem "bcrypt", "~> 3.1.7"
 gem "bootsnap", ">= 1.4.2", require: false
 gem "bootstrap", "~> 4.1.3"
 gem "font-awesome-sass", "~> 5.11.2"
-gem 'simple_form'
+gem "simple_form"
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
@@ -92,7 +92,7 @@ group :development do
   gem "iye", require: false
   # Preview email in the default browser instead of sending it.
   gem "letter_opener"
-  gem 'dotenv-rails'
+  gem "dotenv-rails"
 end
 
 group :test do
@@ -109,7 +109,7 @@ group :test do
   gem "selenium-webdriver"
   # Easy installation and use of chromedriver to run system tests with Chrome
   # gem "chromedriver-helper" # <== DEPRACTED USE INSTEAD: webdrivers
-  gem 'webdrivers', '~> 4.0'
+  gem "webdrivers", "~> 4.0"
   # Speedup RSpec + Cucumber by running parallel on multiple CPU cores
   gem "parallel_tests"
 end

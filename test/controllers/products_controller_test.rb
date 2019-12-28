@@ -1,4 +1,6 @@
-require 'test_helper'
+# frozen_string_literal: true
+
+require "test_helper"
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
   setup do
@@ -16,7 +18,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create product" do
-    assert_difference('Product.count') do
+    assert_difference("Product.count") do
       post products_url, params: { product: { price: @product.price, title: @product.title } }
     end
 
@@ -39,7 +41,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should destroy product" do
-    assert_difference('Product.count', -1) do
+    assert_difference("Product.count", -1) do
       delete product_url(@product)
     end
 
