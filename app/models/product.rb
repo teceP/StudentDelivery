@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Product < ApplicationRecord
-  before_destroy :not_referenced_by_any_line_item
+  before_destroy :not_referenced
   belongs_to :user, optional: true
   has_many :line_items
 
@@ -11,7 +11,7 @@ class Product < ApplicationRecord
 
 
   private
-    def not_refereced_by_any_line_item
+    def not_referenced
       unless line_items.empty?
         errors.add(:base, "Line items present")
         throw :abort

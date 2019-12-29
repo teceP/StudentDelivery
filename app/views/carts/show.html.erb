@@ -14,7 +14,7 @@
           </h4>
       </div>
       <div class="col-sm-4">
-        <span>Total:</span><%= number_to_currency(@cart.total_price) %>
+        <span>Total:</span><%= number_to_currency(@cart.total_price, :unit => '€') %>
       </div>
 
     </div>

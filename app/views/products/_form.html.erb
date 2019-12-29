@@ -2,13 +2,13 @@
   <%= f.error_notification %>
 
 
-  <div id="formRow" class="row justify-content-center">
-    <div class="col-4">
+  <div id="productForm" class="row justify-content-center">
+    <div class="col-sm-3">
       <div class="control">
-        <%= f.input :title, required: true, input_html: {class: "input"}, wrapper: false, label_html: {class: "label"} %>
+        <%= f.input :title, required: true, input_html: {class: "input"},maxlength: 20, wrapper: false, label_html: {class: "label"} %>
       </div>
     </div>
-    <div class="col-4">
+    <div class="col-sm-3">
       <div class="control">
         <%= f.input :price, required: true, input_html: {class: "input", maxlength: 7}, wrapper: false, label_html: {class: "label"} %>
       </div>

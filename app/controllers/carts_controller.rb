@@ -3,18 +3,14 @@
 class CartsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
-
+  before_action :require_user, only: [:index]
   # GET /carts
   # GET /carts.json
   def index
-    if user_signed_in?
       if current_user.admin?
         @cart = Cart.all
       else
         redirect_to root_path, notice: "No permission to see all carts"
-      end
-    else
-      redirect_to root_path, notice: "No permission to see all carts"
     end
   end
 
