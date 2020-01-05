@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+  include Devise::Controllers::Helpers
 
   def new
     @message = Message.new
@@ -6,6 +7,7 @@ class MessagesController < ApplicationController
 
   def create
     @message = Message.create(msg_params)
+
     if @message.save
       ActionCable.server.broadcast 'room_channel',
                                    content: @message.content

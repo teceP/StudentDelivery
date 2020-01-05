@@ -26,5 +26,9 @@ class ApplicationController < ActionController::Base
 
   end
 
+  def get_username
+
+  end
+
 
 end

@@ -25,4 +25,8 @@ class User < ApplicationRecord
     admin
   end
 
+  def get_username
+    username
+  end
+
 end

@@ -47,11 +47,10 @@
             <%= form.password_field :current_password, placeholder: "Current password" %>
           </div>
 
-          <div class="btn" id="update-profile-btn">
-            <% provide(:title, @current_user.email) %>
-            <%= form.submit "Update", class: 'btn btn-rounded' %>
-          </div></div>
 
+            <% provide(:title, @current_user.email) %>
+            <%= form.submit "Update", class: 'btn btn-primary' %>
+          </div>
 
         <% end %>
 
@@ -60,3 +59,5 @@
   </div>
 </div>
 </div>
+
+<div id="placeholder-edit-form"></div>

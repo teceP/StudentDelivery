@@ -32,7 +32,6 @@
     height: 42px;
     border-radius: 5px;
     border: 0;
-    padding-left: 24px;
   }
 
   &::before {
@@ -110,6 +109,10 @@ button {
 #profilepic{
   margin: auto;
   margin-top: -25px;
+}
+
+#placeholder-edit-form{
+  margin-top: 100px;
 }
 
 /* #################################################################################### */
