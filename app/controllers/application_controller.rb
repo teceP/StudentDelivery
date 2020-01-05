@@ -20,11 +20,15 @@ class ApplicationController < ActionController::Base
 
   def require_user
     return if user_signed_in?
-
     flash[:notice] = "Please log in"
+
     redirect_to new_user_session_path
 
   end
 
-
+  def require_admin
+    return if current_user.admin?
+    flash[:notice] = "You're missing admin privileges"
+    redirect_to root_path
+  end
 end

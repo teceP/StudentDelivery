@@ -2,7 +2,9 @@
 
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, only: [:new, :edit]
+  before_action :require_user, only: [:new, :edit, :create, :destroy]
+  before_action :require_admin, only: [:new, :edit, :create, :destroy]
+
 
   # GET /products
   # GET /products.json
@@ -19,11 +21,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    if current_user.admin?
-      @product = Product.new
-    else
-      redirect_to root_path, notice: "No permission to create products"
-    end
+    @product = Product.new
   end
 
 

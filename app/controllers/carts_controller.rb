@@ -3,15 +3,12 @@
 class CartsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
   before_action :set_cart, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, only: [:index]
+  before_action :require_user, only: [:index, :create, :destroy, :new]
+  before_action :require_admin, only: [:index, :create, :new, :update]
   # GET /carts
   # GET /carts.json
   def index
-      if current_user.admin?
-        @cart = Cart.all
-      else
-        redirect_to root_path, notice: "No permission to see all carts"
-    end
+    @cart = Cart.all
   end
 
 
@@ -76,18 +73,19 @@ class CartsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_cart
-      @cart = Cart.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def cart_params
-      params.fetch(:cart, {})
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_cart
+    @cart = Cart.find(params[:id])
+  end
 
-    def invalid_cart
-      logger.error("Attempt to access invalid cart #{params[:id]}")
-      redirect_to root_path, notice: "That cart doesn't exist"
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def cart_params
+    params.fetch(:cart, {})
+  end
+
+  def invalid_cart
+    logger.error("Attempt to access invalid cart #{params[:id]}")
+    redirect_to root_path, notice: "That cart doesn't exist"
+  end
 end
