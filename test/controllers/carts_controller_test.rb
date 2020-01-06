@@ -7,14 +7,14 @@ class CartsControllerTest < ActionDispatch::IntegrationTest
     @cart = carts(:one)
   end
 
-  test "should get index" do
+  test "shouldn't index" do
     get carts_url
-    assert_response :success
+    assert_response :false
   end
 
-  test "should get new" do
+  test "shouldn't new" do
     get new_cart_url
-    assert_response :success
+    assert_response :false
   end
 
   test "should create cart" do

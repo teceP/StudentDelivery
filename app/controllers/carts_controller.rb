@@ -2,9 +2,10 @@
 
 class CartsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
-  before_action :set_cart, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, only: [:index, :create, :destroy, :new]
-  before_action :require_admin, only: [:index, :create, :new, :update]
+  before_action :set_cart, only: %i[show edit, :update, :destroy]
+  before_action :require_user, only: %i[index create destroy update]
+  before_action :require_admin, only: %i[ index create update]
+
   # GET /carts
   # GET /carts.json
   def index
@@ -17,18 +18,8 @@ class CartsController < ApplicationController
   def show
     # When trying to look into others shopping cart
     if @cart.id != session[:cart_id]
-      redirect_to root_path, notice: "This is not your Shopping Cart"
+      redirect_to root_path
     end
-  end
-
-  # GET /carts/new
-  def new
-    redirect_to root_path
-  end
-
-  # GET /carts/1/edit
-  def edit
-    redirect_to root_path
   end
 
   # POST /carts
@@ -73,19 +64,18 @@ class CartsController < ApplicationController
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_cart
+      @cart = Cart.find(params[:id])
+    end
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_cart
-    @cart = Cart.find(params[:id])
-  end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def cart_params
+      params.fetch(:cart, {})
+    end
 
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def cart_params
-    params.fetch(:cart, {})
-  end
-
-  def invalid_cart
-    logger.error("Attempt to access invalid cart #{params[:id]}")
-    redirect_to root_path, notice: "That cart doesn't exist"
-  end
+    def invalid_cart
+      logger.error("Attempt to access invalid cart #{params[:id]}")
+      redirect_to root_path, notice: "That cart doesn't exist"
+    end
 end

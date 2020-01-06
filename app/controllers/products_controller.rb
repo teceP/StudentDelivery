@@ -1,22 +1,17 @@
 # frozen_string_literal: true
 
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, only: [:new, :edit, :create, :destroy]
-  before_action :require_admin, only: [:new, :edit, :create, :destroy]
+  before_action :set_product, only: %i[show edit update destroy]
+  before_action :require_user, only: %i[new edit create destroy]
+  before_action :require_admin, only: %i[new edit create destroy]
 
 
   # GET /products
   # GET /products.json
+  # 'p
+  # '
   def index
     @products = Product.all.order("created_at desc")
-  end
-
-  # GET /products/1
-  # GET /products/1.json
-  def show
-    # Don't need show
-    redirect_to root_path
   end
 
   # GET /products/new
@@ -75,14 +70,13 @@ class ProductsController < ApplicationController
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_product
+      @product = Product.find(params[:id])
+    end
 
-  # Use callbacks to share common setup or constraints between actions.
-  def set_product
-    @product = Product.find(params[:id])
-  end
-
-  # Never trust parameters from the scary internet, only allow the white list through.
-  def product_params
-    params.require(:product).permit(:title, :price)
-  end
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def product_params
+      params.require(:product).permit(:title, :price)
+    end
 end
