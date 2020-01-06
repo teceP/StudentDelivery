@@ -1,6 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+
+  get 'chat/index'
+  resources :messages, only: [:new, :create]
+
   resources :line_items
   resources :carts
   resources :products
