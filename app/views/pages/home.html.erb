@@ -1,7 +1,19 @@
 
 <body>
 
-<%= carousel_for(get_images) %>
+<div class="carousel-container">
+  <i class="fas fa-arrow-left" id="prevBtn"></i>
+  <i class="fas fa-arrow-right" id="nextBtn"></i>
+
+  <div class="carousel-slide">
+    <img class="d-block w-100" id="lastClone" src="https://www.w3schools.com/bootstrap/chicago.jpg" href="google.de">
+    <img class="d-block w-100" src="https://www.w3schools.com/bootstrap/chicago.jpg">
+    <img class="d-block w-100" src="https://www.w3schools.com/bootstrap/chicago.jpg">
+    <img class="d-block w-100" id="firstClone" src="https://www.w3schools.com/bootstrap/chicago.jpg">
+  </div>
+</div>
+
+<%= javascript_pack_tag 'carousel', 'data-turbolinks-track': 'reload' %>
 
 <h1>Istam voluptatem perpetuam quis potest praestare sapienti?</h1>
 
