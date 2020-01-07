@@ -16,7 +16,7 @@ gem "sendgrid-ruby"
 # Devise Testing with factory bot
 gem "factory_bot"
 # for default profile avatar
-gem "gravatar_image_tag", github: "mdeering/gravatar_image_tag"
+gem "gravatar_image_tag", "~> 1.2"
 # for cropping image
 gem "image_processing", "~> 1.2"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

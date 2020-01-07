@@ -1,13 +1,12 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-
   get 'chat/index'
   resources :messages, only: [:new, :create]
 
-  resources :line_items
-  resources :carts
-  resources :products
+  resources :line_items, except: %i[edit show]
+  resources :carts, only: %i[index show update destroy]
+  resources :products, except: %i[show]
   get 'store/index'
   get 'users/index'
   get '/shop', to: 'products#index'

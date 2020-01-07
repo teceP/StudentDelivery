@@ -2,16 +2,14 @@
 
 class CartsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :invalid_cart
-  before_action :set_cart, only: [:show, :edit, :update, :destroy]
-  before_action :require_user, only: [:index]
+  before_action :set_cart, only: %i[show edit, :update, :destroy]
+  before_action :require_user, only: %i[index create destroy update]
+  before_action :require_admin, only: %i[ index create update]
+
   # GET /carts
   # GET /carts.json
   def index
-      if current_user.admin?
-        @cart = Cart.all
-      else
-        redirect_to root_path, notice: "No permission to see all carts"
-    end
+    @cart = Cart.all
   end
 
 
@@ -20,18 +18,8 @@ class CartsController < ApplicationController
   def show
     # When trying to look into others shopping cart
     if @cart.id != session[:cart_id]
-      redirect_to root_path, notice: "This is not your Shopping Cart"
+      redirect_to root_path
     end
-  end
-
-  # GET /carts/new
-  def new
-    redirect_to root_path
-  end
-
-  # GET /carts/1/edit
-  def edit
-    redirect_to root_path
   end
 
   # POST /carts
