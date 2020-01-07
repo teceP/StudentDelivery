@@ -1,25 +1,15 @@
 {
-  "application.js": "/packs/js/application-0ea184899dc5c00a8721.js",
-  "application.js.map": "/packs/js/application-0ea184899dc5c00a8721.js.map",
-  "carousel.js": "/packs/js/carousel-4e3599b20012b1b66211.js",
-  "carousel.js.map": "/packs/js/carousel-4e3599b20012b1b66211.js.map",
+  "application.js": "/packs/js/application-bbc620909ed8b3a86575.js",
+  "application.js.map": "/packs/js/application-bbc620909ed8b3a86575.js.map",
   "dark-mode-switch.js": "/packs/js/dark-mode-switch-3a9be1e75ab5b9e82a61.js",
   "dark-mode-switch.js.map": "/packs/js/dark-mode-switch-3a9be1e75ab5b9e82a61.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-0ea184899dc5c00a8721.js"
+        "/packs/js/application-bbc620909ed8b3a86575.js"
       ],
       "js.map": [
-        "/packs/js/application-0ea184899dc5c00a8721.js.map"
-      ]
-    },
-    "carousel": {
-      "js": [
-        "/packs/js/carousel-4e3599b20012b1b66211.js"
-      ],
-      "js.map": [
-        "/packs/js/carousel-4e3599b20012b1b66211.js.map"
+        "/packs/js/application-bbc620909ed8b3a86575.js.map"
       ]
     },
     "dark-mode-switch": {
