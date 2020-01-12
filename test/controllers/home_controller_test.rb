@@ -8,10 +8,25 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get shop" do
+    get shop_path
+    assert_response :success
+  end
+
+  test "should get about" do
+    get about_path
+    assert_response :success
+  end
+
+  test "should get contact" do
+    get contact_path
+    assert_response :success
+  end
+
   test "Switch to dark mode" do
-    visit root_path
-    click_on "darkSwitch"
-    assert_response :true
+    get root_path
+    # todo how to check if button is clicked and body changed
+    click_button "darkSwitch"
+    assert_response type :success
   end
 end
-

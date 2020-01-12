@@ -2,8 +2,8 @@
 
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
-  before_action :require_user, only: %i[new edit create destroy]
-  before_action :require_admin, only: %i[new edit create destroy]
+  before_action :require_user, only: %i[new edit create destroy update]
+  before_action :require_admin, only: %i[new edit create destroy update]
 
 
   # GET /products
@@ -22,11 +22,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    if current_user.admin?
-      @product = Product.new
-    else
-      redirect_to root_path, notice: "No permission to edit products"
-    end
+    @product = Product.new
   end
 
   # POST /products

@@ -28,5 +28,4 @@ class User < ApplicationRecord
   def get_username
     username
   end
-
 end
