@@ -13,8 +13,6 @@ gem "devise"
 gem "devise-encryptable"
 # Using sendgrid as mailer addon
 gem "sendgrid-ruby"
-# Devise Testing with factory bot
-gem "factory_bot"
 # for default profile avatar
 gem "gravatar_image_tag", "~> 1.2"
 # for cropping image
@@ -44,6 +42,9 @@ gem "font-awesome-sass", "~> 5.11.2"
 gem "simple_form"
 
 group :development, :test do
+  #testing user feature
+  gem "factory_girl_rails"
+  gem "ffaker";
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
