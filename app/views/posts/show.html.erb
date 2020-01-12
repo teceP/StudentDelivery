@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Cart:</strong>
+  <%= @post.cart_id %>
+</p>
+
+<p>
+  <strong>Buyer:</strong>
+  <%= @post.buyer %>
+</p>
+
+<p>
+  <strong>Seller:</strong>
+  <%= @post.seller %>
+</p>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

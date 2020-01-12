@@ -9,9 +9,12 @@
         <%= link_to 'Keep Shopping', shop_path, class: 'button is-warning' %>
       </div>
       <div class="col-sm-4">
-          <h4>
-            <%= button_to 'Empty Cart', @cart, method: :delete, data: {confirm: "Are you sure? "}, class: "button is-danger" %>
-          </h4>
+        <h4>
+          <%= button_to 'Empty Cart', @cart, method: :delete, data: {confirm: "Are you sure? "}, class: "button is-danger" %>
+        </h4>
+      </div>
+      <div class="col-sm-4">
+        <%= link_to 'Checkout', posts_path, {:method => :post, :form_class => "post", :cart => @cart, :buyer => "nil", :seller => "nil"} %>
       </div>
       <div class="col-sm-4">
         <span>Total:</span><%= number_to_currency(@cart.total_price, :unit => '€') %>
