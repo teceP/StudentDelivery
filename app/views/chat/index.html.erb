@@ -1,4 +1,3 @@
-
 <% if user_signed_in? %>
 
 <div class="form-group">
@@ -11,10 +10,6 @@
       <%= f.text_field :content, class:'shadow-sm p-3 mb-5 bg-white rounded' %>
       <%= f.submit "Send", class: 'btn btn-secondary' %>
     <% end %>
-
-    <div id="chat-hint">Your connected to the public Chatroom. You can start to chat now.
-      <%= ActionCable.server.connections.length %> students are connected.
-    </div>
 
   </div>
 

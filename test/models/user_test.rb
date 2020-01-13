@@ -5,6 +5,7 @@ class UserTest < ActiveSupport::TestCase
   # need for devise testing
   # factorybot-gem provides user for testing
   include Devise::Test::ControllerHelpers
+  include FactoryBot::Syntax::Methods
 
   def setup
     @request.env["devise.mapping"] = Devise.mappings[:user]

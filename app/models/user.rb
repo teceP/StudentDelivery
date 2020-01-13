@@ -12,6 +12,7 @@ class User < ApplicationRecord
   # Did you mean?  Devise::Encryptor
 
   has_one_attached :avatar
+  has_many :messages
 
   # not safe enough for passwords, only for email text etc.
   def User.digist(string)
@@ -23,9 +24,5 @@ class User < ApplicationRecord
 
   def admin?
     admin
-  end
-
-  def get_username
-    username
   end
 end
