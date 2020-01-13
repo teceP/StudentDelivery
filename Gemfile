@@ -43,7 +43,7 @@ gem "simple_form"
 
 group :development, :test do
   #testing user feature
-  gem "factory_girl_rails"
+  gem "factory_bot"
   gem "ffaker";
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
