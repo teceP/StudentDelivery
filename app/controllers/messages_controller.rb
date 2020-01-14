@@ -3,7 +3,6 @@
 class MessagesController < ApplicationController
   include Devise::Controllers::Helpers
 
-
   def new
     @message = Message.new
   end
@@ -22,5 +21,4 @@ class MessagesController < ApplicationController
     def msg_params
       params.require(:message).permit(:content)
     end
-
 end

@@ -42,12 +42,13 @@ gem "font-awesome-sass", "~> 5.11.2"
 gem "simple_form"
 
 group :development, :test do
-  gem 'rspec-rails'
-  #testing user feature
+  gem "rspec-rails"
+  # testing user feature
   gem "factory_bot_rails"
-  gem 'rails-controller-testing'
-  gem 'action-cable-testing'
-  gem "ffaker";
+  gem "rails-controller-testing"
+  gem "action-cable-testing"
+  gem "capybara"
+  gem "ffaker"
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
