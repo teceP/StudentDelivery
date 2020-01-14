@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MessagesController < ApplicationController
   include Devise::Controllers::Helpers
 
@@ -9,7 +11,7 @@ class MessagesController < ApplicationController
     @message = Message.create(msg_params)
 
     if @message.save
-      ActionCable.server.broadcast 'room_channel',
+      ActionCable.server.broadcast "room_channel",
                                    content: @message.content
     end
   end
@@ -17,8 +19,7 @@ class MessagesController < ApplicationController
 
 
   private
-
-  def msg_params
-    params.require(:message).permit(:content)
-  end
+    def msg_params
+      params.require(:message).permit(:content)
+    end
 end

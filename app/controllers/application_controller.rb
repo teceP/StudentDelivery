@@ -26,7 +26,7 @@ class ApplicationController < ActionController::Base
 
     def require_admin
       return if current_user.admin?
-      flash[:notice] = "You're missing admin privileges"
+      flash[:notice] = "Missing Privileges"
       redirect_to root_path
     end
 end
