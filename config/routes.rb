@@ -3,7 +3,7 @@
 Rails.application.routes.draw do
   get 'adminpanel/admin'
   get 'chat/index'
-  resources :messages, only: [:new, :create]
+  resources :messages, only: %i[new create]
   resources :posts
   resources :line_items, only: %i[create update destroy]
   resources :carts, only: %i[index show update destroy]

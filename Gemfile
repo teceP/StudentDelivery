@@ -42,9 +42,13 @@ gem "font-awesome-sass", "~> 5.11.2"
 gem "simple_form"
 
 group :development, :test do
-  #testing user feature
-  gem "factory_bot"
-  gem "ffaker";
+  gem "rspec-rails"
+  # testing user feature
+  gem "factory_bot_rails"
+  gem "rails-controller-testing"
+  gem "action-cable-testing"
+  gem "capybara"
+  gem "ffaker"
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -98,8 +102,6 @@ group :development do
 end
 
 group :test do
-  # This gem brings back assigns to your controller tests as well as assert_template
-  gem "rails-controller-testing"
   # Strategies for cleaning databases in Ruby. Can be used to ensure a clean state for testing.
   gem "database_cleaner"
   # Code coverage for Ruby
@@ -107,7 +109,7 @@ group :test do
   # Collection of testing matchers extracted from Shoulda
   gem "shoulda-matchers"
   # Adds support for Capybara system testing and selenium driver
-  gem "capybara", ">= 2.15", "< 4.0"
+  gem "capybara"
   gem "selenium-webdriver"
   # Easy installation and use of chromedriver to run system tests with Chrome
   # gem "chromedriver-helper" # <== DEPRACTED USE INSTEAD: webdrivers
