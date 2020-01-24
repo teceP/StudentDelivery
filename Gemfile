@@ -51,7 +51,7 @@ group :development, :test do
   gem "ffaker"
   # Use sqlite3 as the database for Active Record
   gem "sqlite3"
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Call 'byeburg' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   # Pry is a powerful alternative to the standard IRB shell for Ruby
   gem "pry-rails"
